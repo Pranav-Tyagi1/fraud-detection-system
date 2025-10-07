@@ -129,36 +129,3 @@ new_transaction = [250.0, 2.0, 18, 0.3, 3, np.log1p(250.0), 1, 1]
 prediction, probability = fraud_detector.predict_transaction(new_transaction)
 print(f"Prediction: {'FRAUD' if prediction == 1 else 'NORMAL'}")
 print(f"Probability: {probability*100:.2f}%")
-```
-
-## Troubleshooting
-
-**Issue: Module not found**
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-**Issue: Matplotlib plots not showing**
-- Make sure you're not running in a headless environment
-- Add `plt.show()` if needed
-
-**Issue: Permission denied**
-- Run VS Code as administrator (Windows)
-- Use `sudo` on Mac/Linux
-
-## Next Steps
-
-1. **Try different models**: Add XGBoost, Neural Networks
-2. **Feature engineering**: Create more derived features
-3. **Hyperparameter tuning**: Use GridSearchCV
-4. **Real-time detection**: Build an API with Flask/FastAPI
-5. **Deploy**: Create a web interface or mobile app
-
-## License
-
-MIT License - Feel free to use for learning and projects!
-
-## Contact
-
-For questions or improvements, feel free to modify and extend the code.
